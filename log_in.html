@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Shopping Online</title>
+    <link rel="stylesheet" href="CSS/Sohaib.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <button id="theme">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <div class="Wrapper">
+        <div class="sign-in">
+          <form id="login-form">
+            <h1>Login</h1>
+            <div class="input-group">
+              <input type="text" required id="loginemail" />
+              <label for="loginemail">Username</label>
+            </div>
+            <div class="input-group">
+              <input type="password" required id="loginpass" />
+              <label for="loginpass">Password</label>
+            </div>
+            <div class="remember">
+              <label><input type="checkbox" /> Remember me</label>
+            </div>
+            <div>
+              <button
+                type="submit"
+                onclick="
+                  checklogin();
+                  return false;
+                "
+              >
+                Login
+              </button>
+            </div>
+            <div class="signup-link">
+              <p>
+                Don't have an account? <a href="#" class="signupbtn">Sign up</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="sign-up">
+          <form id="signup-form">
+            <h1>Sign up</h1>
+            <div class="input-group">
+              <input type="text" required id="regeuser" />
+              <label for="regeuser">Username</label>
+            </div>
+            <div class="input-group">
+              <input type="email" required id="regeemail" />
+              <label for="regeemail">E-mail</label>
+            </div>
+            <div class="input-group">
+              <input type="password" required id="regepass" />
+              <label for="regepass">Password</label>
+            </div>
+            <div class="remember">
+              <label
+                ><input type="checkbox" required /> I agree to the terms &
+                conditions</label
+              >
+            </div>
+            <div>
+              <button type="submit" id="registeruser">Sign Up</button>
+            </div>
+            <div class="signup-link">
+              <p>
+                Already have an account?
+                <a href="#" class="signinbtn">Sign in</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>

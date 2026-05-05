@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Makeup</title>
+    <link rel="stylesheet" href="CSS/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --background-body: #f0f4f5;
+        --backgroun-header-content: #e0ecef;
+        --background-product-box: #ffffff;
+        --background-footer: #2d5a64;
+        --text-main: #2d5a64;
+        --text-green: #4a7c44;
+        --text-blue: #4a7c44;
+        --text-gray: #555555;
+        --btn-background: #4a7c44;
+        --btn-hover: #3a8da8;
+        --link-background: #ccd5ae;
+        --link-hover: #4a7c44;
+        --border-gray: #ccd5ae;
+        --shadow-rgba: rgba(58, 141, 168, 0.1);
+      }
+
+      body.darkmode {
+        --background-body: #0d1111;
+        --backgroun-header-content: #161b1b;
+        --background-product-box: #161b1b;
+        --background-footer: #000000;
+        --text-main: #ffffff;
+        --text-green: #5eead4;
+        --text-blue: #5eead4;
+        --text-gray: #aaaaaa;
+        --btn-background: #1f2929;
+        --btn-hover: #5eead4;
+        --link-background: #1f2929;
+        --link-hover: #5eead4;
+        --border-gray: #2d3737;
+        --shadow-rgba: rgba(94, 234, 212, 0.2);
+      }
+      Body {
+        font-family: Arial;
+        background-color: var(--background-body);
+        color: var(--text-main);
+        margin: 0;
+        transition: 0.3s;
+      }
+
+      h1 {
+        color: var(--text-blue);
+        text-align: center;
+      }
+
+      .product-box {
+        background-color: var(--background-product-box);
+        width: 70%;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid var(--border-gray);
+        text-align: center;
+      }
+
+      .product-box img {
+        width: 180px;
+        height: 320px;
+        margin: 10px;
+      }
+
+      .product-box h3 {
+        margin-bottom: 5px;
+        color: var(--text-main);
+      }
+
+      .product-box p {
+        color: var(--text-gray);
+      }
+
+      .buy-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 7px 15px;
+        background-color: var(--btn-background);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .buy-btn:hover {
+        background-color: var(--btn-hover);
+      }
+
+      .shade-links a {
+        display: inline-block;
+        margin: 5px;
+        padding: 5px 10px;
+        background-color: var(--link-background);
+        color: black;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
+      .shade-links a:hover {
+        background-color: var(--link-hover);
+        color: white;
+      }
+
+      .footer {
+        background-color: var(--background-footer);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 30px;
+      }
+
+      .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--text-main);
+        margin: 10px 0;
+      }
+      .add-to-cart {
+        border-radius: 45%;
+        background-color: var(--btn-background);
+        color: #ffffff;
+        width: 150px;
+        height: 50px;
+      }
+      .add-to-cart:hover {
+        transform: scale(1.05);
+        background-color: var(--btn-hover);
+      }
+      .add-to-cart:active {
+        transform: scale(0.95);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Makeup</h1>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="makeup.html" class="active">Makeup</a></li>
+            <li><a href="clothes.html">Clothes</a></li>
+            <li><a href="skin.html">Skin Care</a></li>
+            <li><a href="electro.html">Electronics</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="search-wrapper">
+          <button class="search-trigger" id="searchTrigger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput" placeholder="Search pages..." />
+            <div class="search-dropdown" id="searchDropdown"></div>
+          </div>
+        </div>
+        <button id="theme-switch">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </header>
+    <hr />
+
+    <h1>Makeup Collection</h1>
+
+    <!-- Primer -->
+    <div class="product-box">
+      <h3>Primer</h3>
+      <img src="image_mak/Image011.jpeg" alt="Primer" />
+      <p>Smooth makeup base for long lasting look.</p>
+      <p class="price">550 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Foundation -->
+    <div class="product-box">
+      <h3>Foundation</h3>
+      <img src="image_mak/Image021.jpeg" alt="Foundation" />
+      <p>Get flawless, smooth coverage that lasts all day.</p>
+      <p class="price">650 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Concealer -->
+    <div class="product-box">
+      <h3>Concealer</h3>
+      <img src="image_mak/Image031.jpeg" alt="Concealer" />
+      <p>Hide dark circles and imperfections with ease.</p>
+      <p class="price">300 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Compact Powder -->
+    <div class="product-box">
+      <h3>Compact Powder</h3>
+      <img src="image_mak/Image041.jpeg" alt="Powder" />
+      <p>Set your makeup perfectly with a soft matte finish.</p>
+      <p class="price">750 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Blusher -->
+    <div class="product-box">
+      <h3>Blusher</h3>
+      <img src="image_mak/Image051.jpeg" alt="Blusher" />
+      <p>Add a fresh rosy glow to your cheeks instantly.</p>
+      <p class="price">210 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Highlighter -->
+    <div class="product-box">
+      <h3>Highlighter</h3>
+      <img src="image_mak/Image061.jpeg" alt="Highlighter" />
+      <p>Shine bright with a radiant luminous touch.</p>
+      <p class="price">350 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Eyebrows Pen -->
+    <div class="product-box">
+      <h3>Eyebrows Pen</h3>
+      <img src="image_mak/Image071.jpeg" alt="Eyebrows Pen" />
+      <p>Define and shape your brows naturally.</p>
+      <p class="price">200 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Eyeliner Pencil -->
+    <div class="product-box">
+      <h3>Eyeliner Pencil</h3>
+      <img src="image_mak/Image081.jpeg" alt="Eyeliner Pencil" />
+      <p>Perfect black eye definition.</p>
+      <p class="price">120 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Mascara -->
+    <div class="product-box">
+      <h3>Mascara</h3>
+      <img src="image_mak/Image091.jpeg" alt="Mascara" />
+      <p>Volume and length for lashes.</p>
+      <p class="price">505 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Eyeshadow -->
+    <div class="product-box">
+      <h3>Eyeshadow</h3>
+      <img src="image_mak/Image111.jpeg" alt="Eyeshadow" />
+      <p>Create stunning eye looks with rich colors.</p>
+      <p class="price">700 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Lip Liner -->
+    <div class="product-box">
+      <h3>Lip Liner</h3>
+      <img src="image_mak/Image121.jpeg" alt="Lip Liner" />
+      <p>Outline your lips for a clean, fuller look.</p>
+      <p class="price">150 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Lipstick -->
+    <div class="product-box">
+      <h3>Lipstick</h3>
+      <img src="image_mak/Image131.jpeg" alt="Lipstick" />
+      <p>Bold color and creamy texture in one swipe.</p>
+      <p class="price">450 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Lip Gloss -->
+    <div class="product-box">
+      <h3>Lip Gloss</h3>
+      <img src="image_mak/Image141.jpeg" alt="Lip Gloss" />
+      <p>Glossy, juicy lips with a sparkling finish.</p>
+      <p class="price">300 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Lashes -->
+    <div class="product-box">
+      <h3>Lashes</h3>
+      <img src="image_mak/Image101.jpeg" alt="Lashes" />
+      <p>Beautiful dramatic lashes.</p>
+      <p class="price">280 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Setting Spray -->
+    <div class="product-box">
+      <h3>Setting Spray</h3>
+      <img src="image_mak/Image151.jpeg" alt="Spray" />
+      <p>Fix your makeup all day.</p>
+      <p class="price">330 EGP</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <footer>
+      <div class="logo">
+        <span
+          ><a href=""><i class="fa-brands fa-facebook"></i></a
+        ></span>
+        <span
+          ><a href=""><i class="fa-brands fa-square-snapchat"></i></a
+        ></span>
+        <span>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a
+        ></span>
+      </div>
+      <div class="words">
+        <span class="sign_in"><a href="log_in.html">Sign In</a> </span>
+        <span><a href="index.html">Home</a></span>
+        <span><a href="makeup.html">Makeup</a></span>
+        <span><a href="clothes.html">Clothes</a></span>
+        <span><a href="skin.html">Skin care</a></span>
+        <span><a href="electro.html">Electronics</a> </span>
+        <span><a href="accessories.html">Accessories</a> </span>
+        <span><a href="contactus.html">contact us</a> </span>
+      </div>
+      <div class="reserve">
+        <p>All rights reserved 2026</p>
+      </div>
+    </footer>
+    <script src="darkmode.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

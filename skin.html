@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Skin Care</title>
+    <style>
+      :root {
+        --b-body: #f0f4f5;
+        --b-nav-white: #ffffff;
+        --b-header-cont: #e0ecef;
+        --text-green: #4a7c44;
+        --text-dark: #2d5a64;
+        --button-color: #4a7c44;
+        --button-hover: #3a8da8;
+        --shadow-rgba: rgba(58, 141, 168, 0.1);
+        --border-gray: #ccd5ae;
+      }
+
+      body.darkmode {
+        --b-body: #0d1111;
+        --b-nav-white: #161b1b;
+        --b-header-cont: #161b1b;
+        --text-green: #5eead4;
+        --text-dark: #ffffff;
+        --button-color: #1f2929;
+        --button-hover: #5eead4;
+        --shadow-rgba: rgba(94, 234, 212, 0.2);
+        --border-gray: #2d3737;
+      }
+      body {
+        margin: 0;
+        background-color: var(--b-body);
+        transition: 0.3s;
+      }
+      .row-div {
+        background-color: var(--b-nav-white);
+        display: flex;
+        width: 80%;
+        margin: auto;
+      }
+
+      .products {
+        width: 33.33%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 10px var(--shadow-rgba);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .product:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px var(--shadow-rgba);
+      }
+      img {
+        width: 200px;
+        border-radius: 10px;
+      }
+      .products h3 {
+        color: var(--text-green);
+      }
+      span {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--text-dark);
+      }
+      .products button {
+        display: block;
+        margin: 0 auto;
+        color: white;
+        background-color: var(--button-color);
+        border: 1px solid var(--button-color);
+        font-weight: bold;
+        height: 40px;
+        width: 150px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .products button:hover {
+        background-color: var(--button-hover);
+        transform: translateY(-2px);
+      }
+      .products button:active {
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Skin Care</h1>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="makeup.html">Makeup</a></li>
+            <li><a href="clothes.html">Clothes</a></li>
+            <li><a href="skin.html" class="active">Skin Care</a></li>
+            <li><a href="electro.html">Electronics</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="search-wrapper">
+          <button class="search-trigger" id="searchTrigger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput" placeholder="Search pages..." />
+            <div class="search-dropdown" id="searchDropdown"></div>
+          </div>
+        </div>
+        <button id="theme-switch">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="row-div">
+      <div class="products">
+        <img src="Skin-Images/FoamCleanser.webp" alt="Foam Cleanser" />
+        <h3>Foam Cleanser</h3>
+        <span>900 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/Mostrizer.avif" alt="Mostrizing Crean" />
+        <h3>Mostrizing Cream</h3>
+        <span>900 EGP</span>
+        <button class="add-to-cart" class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/EyeCream.avif" alt="Eye Cream" />
+        <h3>Eye Cream</h3>
+        <span>500 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="row-div">
+      <div class="products">
+        <img src="Skin-Images/VitaminC.avif" alt="Vitamin C Serum" />
+        <h3>Vitamin C Serum</h3>
+        <span>700 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/Toner.avif" alt="Mostrizing Toner" />
+        <h3>Mostrizing Toner</h3>
+        <span>500 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/Peel.webp" alt="Chemical Peel" />
+        <h3>Chemical Peel</h3>
+        <span>600 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="row-div">
+      <div class="products">
+        <img src="Skin-Images/GentleCleanser.webp" alt="Gentle Cleanser" />
+        <h3>Gentle Cleanser</h3>
+        <span>900 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/Sunscreen.webp" alt="Sunscreen" />
+        <h3>Sunscreen</h3>
+        <span>900 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/H-Acid.webp" alt="Hialironic Acid" />
+        <h3>Hialironic Acid Serum</h3>
+        <span>500 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="row-div">
+      <div class="products">
+        <img src="Skin-Images/FaceMask.webp" alt="Face Mask" />
+        <h3>Face Mask</h3>
+        <span>150 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/LipBalm.webp" alt="Lip Balm" />
+        <h3>Lip Palm</h3>
+        <span>200 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/M-Water.avif" alt="Miceller Water" />
+        <h3>Miceller Water</h3>
+        <span>400 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="row-div">
+      <div class="products">
+        <img src="Skin-Images/FacialOil.avif" alt="Facial Oil" />
+        <h3>Facial Oil</h3>
+        <span>450 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/NightCream.avif" alt="Night Cream" />
+        <h3>Night Cream</h3>
+        <span>700 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="products">
+        <img src="Skin-Images/SpotTreatment.jpeg" alt="Spot Treatment" />
+        <h3>Spot Treatment</h3>
+        <span>550 EGP</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <footer>
+      <div class="logo">
+        <span
+          ><a href=""><i class="fa-brands fa-facebook"></i></a
+        ></span>
+        <span
+          ><a href=""><i class="fa-brands fa-square-snapchat"></i></a
+        ></span>
+        <span>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a
+        ></span>
+      </div>
+      <div class="words">
+        <span class="sign_in"><a href="log_in.html">Sign In</a> </span>
+        <span><a href="index.html">Home</a></span>
+        <span><a href="makeup.html">Makeup</a></span>
+        <span><a href="clothes.html">Clothes</a></span>
+        <span><a href="skin.html">Skin care</a></span>
+        <span><a href="electro.html">Electronics</a> </span>
+        <span><a href="accessories.html">Accessories</a> </span>
+        <span><a href="contactus.html">contact us</a> </span>
+      </div>
+      <div class="reserve">
+        <p>All rights reserved 2026</p>
+      </div>
+    </footer>
+    <script src="darkmode.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

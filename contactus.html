@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+    --base-color: #ffffff;
+    --secondry-color: #e0ecef;
+    --open-color: #4a7c44;
+    --border-color: #ccd5ae;
+    --body-color: #f0f4f5;
+    --p-color: #2d5a64;
+    --info-color: #2d5a64;
+    --border2-color: #ccd5ae;
+    --member-card-color: #ffffff;
+    --member-card2-color: rgba(58, 141, 168, 0.1);
+}
+
+.darkmode {
+    --base-color: #0d1111;
+    --secondry-color: #161b1b;
+    --open-color: #5eead4;
+    --border-color: #2d3737;
+    --body-color: #0d1111;
+    --p-color: #ffffff;
+    --info-color: #5eead4;
+    --border2-color: #2d3737;
+    --member-card-color: #161b1b;
+    --member-card2-color: rgba(94, 234, 212, 0.2);
+}
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            ;
+        }
+
+        body {
+            background: var(--body-color);
+            padding: 0;
+
+        }
+
+        .sec {
+            background: var(--base-color);
+            padding: 40px;
+            width: 1000px;
+            border-radius: 30px;
+            margin: 0 250px;
+            box-shadow: 0 3px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        section h1 {
+            color: var(--open-color);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        section p {
+            color: var(--p-color);
+            margin-bottom: 1px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 30px;
+            align-content: center;
+        }
+
+        .info-box {
+            background: var(--secondry-color);
+            border-radius: 10px;
+            border: 2px solid var(--secondry-color);
+            width: 100%;
+            color: var(--info-color);
+            padding: 15px;
+        }
+
+        .separator {
+            margin: 30px 0;
+            height: 1px;
+        }
+
+        .team-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .member-card {
+            background: var(--member-card-color);
+            border-radius: 30px;
+            padding: 20px 30px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            transition: 0.2s;
+        }
+
+        .member-card:hover {
+            background: var(--base-color);
+            border-color: var(--open-color);
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px var(--member-card2-color);
+        }
+
+        .member-card .name {
+            color: var(--info-color);
+            font-weight: bold;
+        }
+
+        .member-card .id {
+            color: var(--open-color);
+            font-weight: 600;
+            background: var(--base-color);
+            padding: 6px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--border2-color);
+        }
+
+        h2 {
+            color: var(--open-color);
+            margin: 10px;
+        }
+
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
+                    <li><a href="clothes.html">Clothes</a></li>
+                    <li><a href="skin.html">Skin Care</a></li>
+                    <li><a href="electro.html">Electronics</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="contactus.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-wrapper">
+          <button class="search-trigger" id="searchTrigger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput" placeholder="Search pages..." />
+            <div class="search-dropdown" id="searchDropdown"></div>
+          </div>
+        </div>
+            <button id="theme-switch">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sec">
+
+        <section>
+            <h1>Contact Us</h1>
+            <p>Feel free to Contact us</p>
+        </section>
+
+        <div class="contact-info">
+            <div class="info-box"><strong>Phone:</strong> 01111111111</div>
+            <div class="info-box"><strong>E-mail:</strong> nothing@gmail.com</div>
+            <div class="info-box"><strong>Location:</strong> Faculty of computer science</div>
+        </div>
+
+        <hr class="separator">
+
+        <h2>Team Members</h2>
+
+        <div class="team-list">
+            <div class="member-card">
+                <span class="name">Shady Magdy</span>
+                <span class="id">20250493</span>
+            </div>
+            <div class="member-card">
+                <span class="name">Taher Essam</span>
+                <span class="id">20250517</span>
+            </div>
+            <div class="member-card">
+                <span class="name">Ziad Nader</span>
+                <span class="id">20240342</span>
+            </div>
+            <div class="member-card">
+                <span class="name">Logain Mohamed Abdallah</span>
+                <span class="id">20240742</span>
+            </div>
+            <div class="member-card">
+                <span class="name">Sohaib Abdellwahab</span>
+                <span class="id">20250513</span>
+            </div>
+            <div class="member-card">
+                <span class="name">Seif Ayman</span>
+                <span class="id">20250487</span>
+            </div>
+            <div class="member-card">
+                <span class="name">Tasniim Mohamed </span>
+                <span class="id">20251294</span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="logo">
+            <span><a href=""><i class="fa-brands fa-facebook"></i></a></span>
+            <span><a href=""><i class="fa-brands fa-square-snapchat"></i></a></span>
+            <span> <a href=""><i class="fa-brands fa-square-instagram"></i></a></span>
+        </div>
+        <div class="words">
+            <span class="sign_in"><a href="log_in.html">Sign In</a> </span>
+            <span><a href="index.html">Home</a></span>
+            <span><a href="makeup.html">Makeup</a></span>
+            <span><a href="clothes.html">Clothes</a></span>
+            <span><a href="skin.html">Skin care</a></span>
+            <span><a href="electro.html">Electronics</a> </span>
+            <span><a href="accessories.html">Accessories</a> </span>
+            <span><a href="contactus.html">contact us</a> </span>
+        </div>
+        <div class="reserve"> 
+            <p>All rights reserved 2026</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="darkmode.js"></script>
+    <script>
+        const pages = [
+  { name: "Sign In", url: "log_in.html" },
+  { name: "Home", url: "index.html" },
+  { name: "Makeup", url: "makeup.html" },
+  { name: "Clothes", url: "clothes.html" },
+  { name: "Skin Care", url: "skin.html" },
+  { name: "Electronics", url: "electro.html" },
+  { name: "Accessories", url: "accessories.html" },
+  { name: "Contact Us", url: "contactus.html" },
+];
+
+const trigger = document.getElementById("searchTrigger");
+const searchBox = document.getElementById("searchBox");
+const input = document.getElementById("searchInput");
+const dropdown = document.getElementById("searchDropdown");
+
+trigger.addEventListener("click", function (e) {
+  e.stopPropagation();
+  const isOpen = searchBox.style.display === "block";
+  searchBox.style.display = isOpen ? "none" : "block";
+  if (!isOpen) input.focus();
+});
+
+input.addEventListener("input", function () {
+  const val = this.value.trim().toLowerCase();
+  dropdown.innerHTML = "";
+  if (!val) return;
+
+  const filtered = pages.filter((p) => p.name.toLowerCase().includes(val));
+
+  if (filtered.length === 0) {
+    dropdown.innerHTML = `<div class="no-result">No results found</div>`;
+  } else {
+    filtered.forEach((p) => {
+      dropdown.innerHTML += `<a href="${p.url}">${p.name}</a>`;
+    });
+  }
+});
+
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".search-wrapper")) {
+    searchBox.style.display = "none";
+    input.value = "";
+    dropdown.innerHTML = "";
+  }
+});
+    </script>
+</body>
+
+</html>

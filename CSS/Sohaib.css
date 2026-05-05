@@ -1,0 +1,175 @@
+:root {
+  --body-color: black;
+  --primary-color: white;
+  --seconary-color: turquoise;
+}
+
+.darkmode {
+  --body-color: white;
+  --primary-color: black;
+  --seconary-color: #557c3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--body-color);
+}
+
+.Wrapper {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background: var(--body-color);
+  box-shadow: 0 0 60px var(--seconary-color);
+  border-radius: 20px;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.sign-in,
+.sign-up {
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+.sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Wrapper.active .sign-in {
+  transform: translateY(-500px);
+}
+
+.sign-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transform: translateY(500px);
+}
+
+.Wrapper.active .sign-up {
+  transform: translateY(0);
+}
+
+h1 {
+  font-size: 35px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.input-group {
+  position: relative;
+  margin: 30px 0;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: var(--primary-color);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -5px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  color: var(--primary-color);
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.remember {
+  margin: 15px 0;
+}
+
+.remember label {
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background: var(--seconary-color);
+  box-shadow: 0 0 10px var(--seconary-color);
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signup-link {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-link p {
+  color: var(--primary-color);
+}
+
+.signup-link p a {
+  color: var(--seconary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link p a:hover {
+  text-decoration: underline;
+}
+
+#theme {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--seconary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#theme i:last-child {
+  display: none;
+}
+
+.darkmode #theme i:first-child {
+  display: none;
+}
+
+.darkmode #theme i:last-child {
+  display: block;
+}

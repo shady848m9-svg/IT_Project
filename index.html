@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="CSS/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --bg-body: #f0f4f5;
+        --bg-header-cont: #e0ecef;
+        --bg-box: #ffffff;
+        --bg-footer: #2d5a64;
+        --text-main: #2d5a64;
+        --text-green: #4a7c44;
+        --text-blue: #4a7c44;
+        --btn-bg: #4a7c44;
+        --btn-hover: #3a8da8;
+        --border-gray: #ccd5ae;
+        --shadow-rgba: rgba(58, 141, 168, 0.1);
+      }
+
+      body.darkmode {
+        --bg-body: #0d1111;
+        --bg-header-cont: #161b1b;
+        --bg-box: #161b1b;
+        --bg-footer: #000000;
+        --text-main: #ffffff;
+        --text-green: #5eead4;
+        --text-blue: #5eead4;
+        --btn-bg: #1f2929;
+        --btn-hover: #5eead4;
+        --border-gray: #2d3737;
+        --shadow-rgba: rgba(94, 234, 212, 0.2);
+      }
+      Body {
+        font-family: Arial;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        margin: 0;
+        transition: 0.3s;
+      }
+
+      h1,
+      h2 {
+        color: var(--text-blue);
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .box {
+        background-color: var(--bg-box);
+        padding: 15px;
+        margin: 15px auto;
+        border: 1px solid var(--border-gray);
+        width: 60%;
+        text-align: center;
+        border-radius: 5px;
+        color: var(--text-main);
+      }
+
+      .box img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .box a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: var(--btn-bg);
+        color: white;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .box a:hover {
+        background-color: var(--btn-hover);
+      }
+
+      .footer {
+        background-color: var(--bg-footer);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      .intro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      video {
+        width: 600px;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Home</h1>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="makeup.html">Makeup</a></li>
+            <li><a href="clothes.html">Clothes</a></li>
+            <li><a href="skin.html">Skin Care</a></li>
+            <li><a href="electro.html">Electronics</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="search-wrapper">
+          <button class="search-trigger" id="searchTrigger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search
+          </button>
+          <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput" placeholder="Search pages..." />
+            <div class="search-dropdown" id="searchDropdown"></div>
+          </div>
+        </div>
+        <button id="theme-switch">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </header>
+
+    <hr />
+
+    <h1>Welcome!</h1>
+    <p>This is online shopping website.</p>
+    <p>Click on a category to start shopping.</p>
+
+    <hr />
+    <div class="intro">
+      <video
+        src="image_home/WhatsApp Video 2026-05-05 at 3.47.47 PM.mp4"
+        loop
+        muted
+        autoplay
+      ></video>
+    </div>
+
+    <h2>Categories</h2>
+
+    <div class="box">
+      <h3>Electronics</h3>
+      <dl>
+        <dt><img src="image_home/electronics.png" alt="Electronics" /></dt>
+        <dd>
+          <p>Phones, laptops, and more.</p>
+          <a href="electro.html">Go to Electronics</a>
+        </dd>
+      </dl>
+    </div>
+
+    <div class="box">
+      <h3>Makeup</h3>
+      <dl>
+        <dt><img src="image_home/makeup.WEBP" alt="Makeup" /></dt>
+        <dd>
+          <p>Beauty and cosmetics.</p>
+          <a href="makeup.html">Go to Makeup</a>
+        </dd>
+      </dl>
+    </div>
+
+    <div class="box">
+      <h3>Clothing</h3>
+      <dl>
+        <dt>
+          <img src="image_home/clothing.jpg" alt="Clothing" />
+        </dt>
+        <dd>
+          <p>Clothes for everyone.</p>
+          <a href="clothes.html">Go to Clothing</a>
+        </dd>
+      </dl>
+    </div>
+
+    <div class="box">
+      <h3>Accessories</h3>
+      <dl>
+        <dt>
+          <img src="image_home/accessories.jpg" alt="Accessories" />
+        </dt>
+        <dd>
+          <p>Bags, watches, and more.</p>
+          <a href="accessories.html">Go to Accessories</a>
+        </dd>
+      </dl>
+    </div>
+    <div class="box">
+      <h3>skin care</h3>
+      <dl>
+        <dt>
+          <img
+            src="image_home/WhatsApp Image 2026-05-05 at 3.53.02 PM.jpeg"
+            alt="Skin Care"
+          />
+        </dt>
+        <dd>
+          <p>Cleansers,Specialized Treatments and more.</p>
+          <a href="skin.html">Go to Skin Care</a>
+        </dd>
+      </dl>
+    </div>
+
+    <footer>
+      <div class="logo">
+        <span
+          ><a href=""><i class="fa-brands fa-facebook"></i></a
+        ></span>
+        <span
+          ><a href=""><i class="fa-brands fa-square-snapchat"></i></a
+        ></span>
+        <span>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a
+        ></span>
+      </div>
+      <div class="words">
+        <span class="sign_in"><a href="log_in.html">Sign In</a> </span>
+        <span><a href="index.html">Home</a></span>
+        <span><a href="makeup.html">Makeup</a></span>
+        <span><a href="clothes.html">Clothes</a></span>
+        <span><a href="skin.html">Skin care</a></span>
+        <span><a href="electro.html">Electronics</a> </span>
+        <span><a href="accessories.html">Accessories</a> </span>
+        <span><a href="contactus.html">contact us</a> </span>
+      </div>
+      <div class="reserve">
+        <p>All rights reserved 2026</p>
+      </div>
+    </footer>
+    <script src="darkmode.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
