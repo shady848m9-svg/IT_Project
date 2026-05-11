@@ -78,8 +78,8 @@ header nav li a:hover {
   }
 }
 #theme-switch {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 38px;
   padding: 0;
   border-radius: 50%;
   background-color: var(--text-accent);
@@ -108,7 +108,7 @@ header nav li a:hover {
 
 .cart i {
   color: var(--text-main);
-  font-size: 20px;
+  font-size: 30px;
   transition: var(--transition-speed);
 }
 
@@ -120,7 +120,7 @@ header nav li a:hover {
   color: #ffffff;
   border-radius: 50%;
   padding: 2px 6px;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1;
   min-width: 18px;
@@ -128,9 +128,6 @@ header nav li a:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#cart-count.bump {
-  transform: scale(1.2);
-}
 footer {
   margin-top: 30px;
   margin-bottom: 0;
@@ -148,7 +145,6 @@ footer {
   text-align: center;
   gap: 10px;
   justify-content: center;
-
   font-weight: 500;
 }
 
@@ -173,7 +169,7 @@ footer {
   font-size: 30px;
   gap: 10px;
 }
-header .reserve p {
+footer .reserve p {
   line-height: 1.6;
   color: var(--text-accent);
   padding: 5px;
@@ -192,6 +188,7 @@ header .reserve p {
 .sign_in a {
   background-color: var(--text-accent);
   border-radius: 50%;
+  padding: 10px 15px;
   border-bottom: none;
   font-size: 18px;
   margin-right: 30px;
@@ -279,4 +276,8 @@ header .reserve p {
   font-size: 13px;
   color: var(--text-main);
   opacity: 0.5;
+}
+header .navbar .active {
+  border-bottom: 2px solid var(--text-line);
+  transform: translateY(-8px);
 }
